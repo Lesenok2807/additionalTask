@@ -4,28 +4,46 @@
 
 
 function one(num) {
-    function two(x) {
-        const a = +prompt("Ведите число от 1 до 100");
-        x--;
+    function two() {
+        const a = prompt("Угадайте число от 1 до 100");
+      
 
         console.log(a);
-        
 
-        if (a !== num) {
-            if (a > num) {
-                console.log("число меньше", a);
-            } else if (a < num) {
-            console.log("число больше", a);
-            } else if (a === 0) {
-                alert();
+        if (!isNaN(parseFloat(a)) && isFinite(a)) {
+
+            if (a !== num) {
+                if(a >= 1 && a > num) {
+                    alert(" Загаданное число меньше");
+                } else if (a < num && a <= 100) {
+                    alert("Загаданное число больше");
+                }     
+                two();      
+
+               
+                
+    
+            } else {
+                alert("Поздравляю, Вы угадали!!!");               
+                
             }
-            two();           
+            
+            
+            
+
         } else {
-            alert("ты выиграл");
+
+             if (a !== null) {
+                 alert("Введите число");
+                 two();
+             } else {
+                alert("Игра окончена");
+             }
         }          
+        
     }
 
     two();
 }  
 
-one(77);
+one(5);
