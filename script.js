@@ -1,23 +1,15 @@
 'use srtict';
 
-function one(x) {
-    function two() {
-        const a = +prompt("Угадай число от 1 до 100");
-        x--;
+const num = +prompt("Угадай число от 1 до 100");
 
-        if (a > x) {
-            console.log('Загаданное число меньше');
-        } else if (a < x) {
-            console.log('Загаданное число больше');
-        } else if (a === !isNaN) {
-            a = +prompt("Введите число");
-        } else if () {
-            alert("Поздравляю, Вы угадали!!!");
-        } else {
-            alert("Игра окончена");
-        }
-
-    }
-    two();
+const isNumber = function() {
+    return isNaN(parseFloat() && isFinite(num));
 }
-one(100);
+
+function one() {
+    
+    do {
+        num = +prompt("Угадай число от 1 до 100");
+    } while (!isNamber(num));
+}    
+one();
