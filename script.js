@@ -1,15 +1,31 @@
 'use srtict';
 
-const num = +prompt("Угадай число от 1 до 100");
 
-const isNumber = function() {
-    return isNaN(parseFloat() && isFinite(num));
-}
 
-function one() {
-    
-    do {
-        num = +prompt("Угадай число от 1 до 100");
-    } while (!isNamber(num));
-}    
-one();
+
+function one(num) {
+    function two(x) {
+        const a = +prompt("Ведите число от 1 до 100");
+        x--;
+
+        console.log(a);
+        
+
+        if (a !== num) {
+            if (a > num) {
+                console.log("число меньше", a);
+            } else if (a < num) {
+            console.log("число больше", a);
+            } else if (a === 0) {
+                alert();
+            }
+            two();           
+        } else {
+            alert("ты выиграл");
+        }          
+    }
+
+    two();
+}  
+
+one(77);
