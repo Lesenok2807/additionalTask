@@ -1,14 +1,18 @@
 'use srtict';
 
 
+const num = function(min, max) {
+    return Math.floor(Math.random() * (max - min +1) + min);
 
+};
 
 function one(num) {
     function two() {
-        const a = prompt("Угадайте число от 1 до 100");
+        const a = prompt("Угадайте число от 1 до 100");     
       
 
         console.log(a);
+        console.log(num);
 
         if (!isNaN(parseFloat(a)) && isFinite(a)) {            
                 
@@ -37,4 +41,4 @@ function one(num) {
     two();
 }  
 
-one(5);
+one(num(1, 100));
