@@ -10,27 +10,18 @@ function one(num) {
 
         console.log(a);
 
-        if (!isNaN(parseFloat(a)) && isFinite(a)) {
-
-            if (a !== num) {
-                if(a >= 1 && a > num) {
-                    alert(" Загаданное число меньше");
-                } else if (a < num && a <= 100) {
-                    alert("Загаданное число больше");
-                }     
-                two();      
-
-               
+        if (!isNaN(parseFloat(a)) && isFinite(a)) {            
                 
-    
-            } else {
-                alert("Поздравляю, Вы угадали!!!");               
-                
-            }
-            
-            
-            
-
+        if(a >= 1 && a < num) {
+            alert(" Загаданное число больше");
+            two();
+        } else if (a > num && a <= 100) {
+            alert("Загаданное число меньше");
+            two();
+        } else if ( a == num) {
+            alert("Поздравляю, Вы угадали!!!");
+        }                       
+        
         } else {
 
              if (a !== null) {
